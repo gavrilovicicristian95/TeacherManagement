@@ -8,10 +8,10 @@
 		<version>2.2.11.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.bezkoder</groupId>
-	<artifactId>spring-boot-security-postgresql</artifactId>
+	<groupId>com.teacher.management</groupId>
+	<artifactId>com-teacher-management</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-security-postgresql</name>
+	<name>com-teacher-management</name>
 	<description>Spring Boot, Spring Security, PostgreSQL: JWT Authentication &amp; Authorization example</description>
 
 	<properties>
