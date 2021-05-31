@@ -1,0 +1,2 @@
+# TeacherManagement
+Proiect Licenta
