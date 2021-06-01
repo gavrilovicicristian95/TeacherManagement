@@ -12,7 +12,7 @@
 	<artifactId>com-teacher-management</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>com-teacher-management</name>
-	<description>Spring Boot, Spring Security, PostgreSQL: JWT Authentication &amp; Authorization example</description>
+	<description>Teacher Management application</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -56,6 +56,15 @@
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
 		</dependency>
 	</dependencies>
 
