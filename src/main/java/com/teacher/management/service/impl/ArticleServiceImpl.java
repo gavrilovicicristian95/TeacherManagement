@@ -32,4 +32,9 @@ public class ArticleServiceImpl implements ArticleService {
     public List<Article> getArticlesByTipArticol(String tipArticol) {
         return articleRepository.getArticlesByTipArticol(tipArticol);
     }
+
+    @Override
+    public List<Article> getArticleByTipArticolAndIdUser(String tipArticol, Integer userId) {
+        return articleRepository.getArticleByTipArticolAndIdUser(tipArticol, userId);
+    }
 }

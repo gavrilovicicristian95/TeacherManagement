@@ -41,5 +41,9 @@ public class ArticlesController {
     public List<Article> getArticlesByTipArticol(@PathVariable String tipArticol){
         return articleService.getArticlesByTipArticol(tipArticol);
     }
+    @GetMapping("/getArticlesByUser/{tipArticol}/{idUser}")
+    public List<Article> getArticlesByTipArticol(@PathVariable String tipArticol, @PathVariable Integer idUser){
+        return articleService.getArticleByTipArticolAndIdUser(tipArticol,idUser);
+    }
 
 }

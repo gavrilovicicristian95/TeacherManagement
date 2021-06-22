@@ -2,6 +2,7 @@ package com.teacher.management.controllers;
 
 import com.teacher.management.models.Citation;
 import com.teacher.management.service.CitationService;
+import com.teacher.management.util.CitationScores;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,9 +17,11 @@ import java.util.List;
 public class CitationController {
 
     private final CitationService citationService;
+    private final CitationScores citationScores;
 
     @PostMapping("/addCitation")
     public ResponseEntity<Citation> saveCitation(@RequestBody Citation citation){
+        citation.setPunctaj(citationScores.getArticleScore(citation.getFactorImpact(),citation.getNrAutori(),citation.getTipCitatie()));
         citationService.save(citation);
 
         return new ResponseEntity<>(citation, HttpStatus.OK);

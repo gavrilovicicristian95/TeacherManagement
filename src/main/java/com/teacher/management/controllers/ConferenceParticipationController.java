@@ -4,6 +4,7 @@ import com.teacher.management.models.Book;
 import com.teacher.management.models.ConferenceParticipation;
 import com.teacher.management.service.BookService;
 import com.teacher.management.service.ConferenceParticipationService;
+import com.teacher.management.util.ConferenceParticipationScores;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,15 +19,16 @@ import java.util.List;
 public class ConferenceParticipationController {
 
     private final ConferenceParticipationService conferenceParticipationService;
-
+    private final ConferenceParticipationScores conferenceParticipationScores;
     @PostMapping("/addConference")
     public ResponseEntity<ConferenceParticipation> saveConferenceParticipation(@RequestBody ConferenceParticipation conferenceParticipation){
+        conferenceParticipation.setPunctaj(conferenceParticipationScores.getArticleScore(conferenceParticipation.getTipConferinta()));
         conferenceParticipationService.save(conferenceParticipation);
 
         return new ResponseEntity<>(conferenceParticipation, HttpStatus.OK);
     }
 
-    @GetMapping("/getConference/{idConference}")
+    @GetMapping("/getConference/{idConferenceParticipation}")
     public ConferenceParticipation findByIdConferenceParticipation(@PathVariable long idConferenceParticipation){
         return conferenceParticipationService.findByIdConferenceParticipation(idConferenceParticipation);
     }
@@ -36,7 +38,7 @@ public class ConferenceParticipationController {
         return conferenceParticipationService.findAll();
     }
 
-    @GetMapping("/getConferenceParticipations/{tipConference}")
+    @GetMapping("/getConferenceParticipations/{tipConferinta}")
     public List<ConferenceParticipation> getConferencesByTipCarte(@PathVariable String tipConferinta){
         return conferenceParticipationService.findConferenceParticipationByTipConferinta(tipConferinta);
     }

@@ -14,7 +14,7 @@ public class Article {
     private int idArticol;
 
     @Column(name = "idUser")
-    private int idUser;
+    private Integer idUser;
 
     @Column(name = "anulPublicarii")
     private String anulPublicarii;
