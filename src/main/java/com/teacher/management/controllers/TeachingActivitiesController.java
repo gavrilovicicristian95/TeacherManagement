@@ -23,7 +23,7 @@ public class TeachingActivitiesController {
         return new ResponseEntity<>(teachingActivity, HttpStatus.OK);
     }
     @GetMapping("/getTeachingActivity/{idTeachingActivity}")
-    public TeachingActivity findByIdTeachingActivity(@PathVariable int idTeachingActivity){
+    public TeachingActivity findByIdTeachingActivity(@PathVariable long idTeachingActivity){
         return teachingActivityService.findByIdActivity(idTeachingActivity);
     }
 

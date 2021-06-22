@@ -22,7 +22,7 @@ public class ThesisCoordinationsController {
         return new ResponseEntity<>(thesisCoordination, HttpStatus.OK);
     }
     @GetMapping("/getThesisCoordination/{idThesisCoordination}")
-    public ThesisCoordination findByIdThesisCoordination(@PathVariable int idThesisCoordination){
+    public ThesisCoordination findByIdThesisCoordination(@PathVariable long idThesisCoordination){
         return thesisCoordinationService.findByIdThesisCoord(idThesisCoordination);
     }
 

@@ -7,12 +7,12 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "cursuri_si_manuale")
+@Table(name = "courses_and_manuals")
 @Data
 public class CoursesManuals {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer idCourseManual;
+    private long idCourseManual;
     @Column(name = "idUser")
     private Integer idUser;
     @Column(name = "tipCursManual")

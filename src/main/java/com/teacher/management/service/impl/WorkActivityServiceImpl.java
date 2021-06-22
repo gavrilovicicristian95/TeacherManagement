@@ -12,7 +12,7 @@ import java.util.List;
 public class WorkActivityServiceImpl implements WorkActivityService {
     private final WorkActivityRepository workActivityRepository;
     @Override
-    public WorkActivity findByIdWorkActivity(int idWorkActivity) {
+    public WorkActivity findByIdWorkActivity(long idWorkActivity) {
         return workActivityRepository.findByIdWorkActivity(idWorkActivity);
     }
 

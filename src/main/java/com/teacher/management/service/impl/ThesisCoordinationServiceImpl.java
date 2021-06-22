@@ -12,7 +12,7 @@ import java.util.List;
 public class ThesisCoordinationServiceImpl implements ThesisCoordinationService {
     private final ThesisCoordinationRepository thesisCoordinationRepository;
     @Override
-    public ThesisCoordination findByIdThesisCoord(int idThesisCoord) {
+    public ThesisCoordination findByIdThesisCoord(long idThesisCoord) {
         return thesisCoordinationRepository.findByIdThesisCoord(idThesisCoord);
     }
 

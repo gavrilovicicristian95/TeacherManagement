@@ -22,7 +22,7 @@ public class CoursesManualsController {
         return new ResponseEntity<>(coursesManuals, HttpStatus.OK);
     }
     @GetMapping("/getCoursesManuals/{idCoursesManuals}")
-    public CoursesManuals findByIdCoursesManuals(@PathVariable int idCoursesManuals){
+    public CoursesManuals findByIdCoursesManuals(@PathVariable long idCoursesManuals){
         return coursesManualsService.findByIdCourseManual(idCoursesManuals);
     }
 

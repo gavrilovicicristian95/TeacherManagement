@@ -5,7 +5,7 @@ import com.teacher.management.models.TeachingActivity;
 import java.util.List;
 
 public interface TeachingActivityService {
-    public TeachingActivity findByIdActivity(int idTeachingActivity);
+    public TeachingActivity findByIdActivity(long idTeachingActivity);
     public TeachingActivity save(TeachingActivity teachingActivity);
     public List<TeachingActivity> findAll();
     public List<TeachingActivity> getTeachingActivitiesByTipActivitate(String tipActivitate);

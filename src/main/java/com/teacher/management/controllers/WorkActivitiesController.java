@@ -21,7 +21,7 @@ public class WorkActivitiesController {
         return new ResponseEntity<>(workActivity, HttpStatus.OK);
     }
     @GetMapping("/getWorkActivity/{idWorkActivity}")
-    public WorkActivity findByIdWorkActivity(@PathVariable int idWorkActivity){
+    public WorkActivity findByIdWorkActivity(@PathVariable long idWorkActivity){
         return workActivityService.findByIdWorkActivity(idWorkActivity);
     }
 

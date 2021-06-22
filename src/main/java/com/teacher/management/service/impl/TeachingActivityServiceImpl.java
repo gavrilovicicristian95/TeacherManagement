@@ -14,7 +14,7 @@ import java.util.List;
 public class TeachingActivityServiceImpl implements TeachingActivityService {
     private final TeachingActivityRepository teachingActivityRepository;
     @Override
-    public TeachingActivity findByIdActivity(int idTeachingActivity) {
+    public TeachingActivity findByIdActivity(long idTeachingActivity) {
         return teachingActivityRepository.findByIdActivity(idTeachingActivity);
     }
 

@@ -5,12 +5,12 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "coordonare_teza")
+@Table(name = "thesis_coordinations")
 @Data
 public class ThesisCoordination {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer idThesisCoord;
+    private long idThesisCoord;
     @Column(name = "idUser")
     private Integer idUser;
     @Column(name = "tipTeza")

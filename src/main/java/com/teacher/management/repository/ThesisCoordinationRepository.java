@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface ThesisCoordinationRepository extends JpaRepository<ThesisCoordination,Long> {
-    public ThesisCoordination findByIdThesisCoord(int idThesisCoord);
+    public ThesisCoordination findByIdThesisCoord(long idThesisCoord);
     public ThesisCoordination save(ThesisCoordination thesisCoordination);
     public List<ThesisCoordination> findAll();
     public List<ThesisCoordination> getThesisCoordonationByTipTeza(String tipTeza);

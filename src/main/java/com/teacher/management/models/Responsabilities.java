@@ -9,7 +9,11 @@ import javax.persistence.*;
 public class Responsabilities {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer idResponsability;
+    private long idResponsability;
     @Column(name = "idUser")
     private Integer idUser;
+    @Column(name = "responsabilityType")
+    private String responsabilityType;
+    @Column(name = "nrAni")
+    private String nrAni;
 }

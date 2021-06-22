@@ -7,7 +7,7 @@ import java.net.Inet4Address;
 import java.util.List;
 
 public interface WorkActivityRepository extends JpaRepository<WorkActivity,Long> {
-    public WorkActivity findByIdWorkActivity(int idWorkActivity);
+    public WorkActivity findByIdWorkActivity(long idWorkActivity);
     public WorkActivity save(WorkActivity workActivity);
     public List<WorkActivity> findAll();
 

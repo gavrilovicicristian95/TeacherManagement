@@ -12,7 +12,7 @@ import java.util.List;
 public class CoursesManualsServiceImplementation implements CoursesManualsService {
     private final CoursesManualsRepository coursesManualsRepository;
     @Override
-    public CoursesManuals findByIdCourseManual(int idCourseManual) {
+    public CoursesManuals findByIdCourseManual(long idCourseManual) {
          return  coursesManualsRepository.findByIdCourseManual(idCourseManual);
     }
 
