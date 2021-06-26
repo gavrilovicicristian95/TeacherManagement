@@ -33,4 +33,9 @@ public class CitationServiceImpl implements CitationService {
     public List<Citation> getCitationByTipCitatie(String tipCitatie) {
         return citationRepository.getCitationByTipCitatie(tipCitatie);
     }
+
+    @Override
+    public List<Citation> getCitationsByTipCitatieAndIdUser(String tipCitatie, Integer userId) {
+        return citationRepository.getCitationsByTipCitatieAndIdUser(tipCitatie, userId);
+    }
 }

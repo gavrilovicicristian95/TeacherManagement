@@ -14,7 +14,7 @@ public class Contract {
     private long idContract;
 
     @Column(name = "idUser")
-    private int idUser;
+    private Integer idUser;
 
     @Column(name = "tipContract")
     private String tipContract;

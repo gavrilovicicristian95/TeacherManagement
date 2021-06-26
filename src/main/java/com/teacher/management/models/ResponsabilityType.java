@@ -13,7 +13,8 @@ public class ResponsabilityType {
     private long idResponsabilityType;
     @Column(name = "nrPuncteAnual")
     private int nrPuncteAnual;
-
+    @Column(name = "tipResponsabilitate")
+    private String tipResponsabilitate;
     @Column(name = "responsabilityType")
     private String responsabilityType;
 

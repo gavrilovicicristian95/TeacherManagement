@@ -38,8 +38,9 @@ public class BooksController {
         return bookService.findAll();
     }
 
-    @GetMapping("/getBooks/{tipCarte}")
-    public List<Book> getBooksByTipCarte(@PathVariable String tipCarte){
-        return bookService.findByTipCarte(tipCarte);
+
+    @GetMapping("/getBooksByUser/{tipCarte}/{userId}")
+    public List<Book> getBooksByTipCarteAndUserId(@PathVariable String tipCarte,@PathVariable Integer userId){
+        return bookService.findBookByTipCarteAndIdUser(tipCarte, userId);
     }
 }

@@ -10,4 +10,5 @@ public interface ScientificWorkService {
     public ScientificWork save(ScientificWork scientificWork);
     public List<ScientificWork> findAll();
     public List<ScientificWork> findScientificWorkByTipLucrare(String lucrare);
+    public List<ScientificWork> findScientificWorksByTipLucrareAndIdUser(String tipLucrare, Integer idUser);
 }

@@ -14,7 +14,7 @@ public class ScientificWork {
     private long idScientificWork;
 
     @Column(name = "idUser")
-    private int idUser;
+    private Integer idUser;
 
     @Column(name = "tipLucrare")
     private String tipLucrare;

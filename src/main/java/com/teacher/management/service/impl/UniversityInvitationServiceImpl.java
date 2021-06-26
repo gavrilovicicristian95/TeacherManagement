@@ -33,4 +33,9 @@ public class UniversityInvitationServiceImpl implements UniversityInvitationServ
     public List<UniversityInvitation> findUniversityInvitationByTipInvitatie(String invitatie) {
         return universityInvitationRepository.findUniversityInvitationByTipInvitatie(invitatie);
     }
+
+    @Override
+    public List<UniversityInvitation> findUniversityInvitationsByTipInvitatieAndIdUser(String tipInvitatie, Integer idUser) {
+        return universityInvitationRepository.findUniversityInvitationsByTipInvitatieAndIdUser(tipInvitatie,idUser);
+    }
 }

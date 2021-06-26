@@ -42,4 +42,8 @@ public class ConferenceParticipationController {
     public List<ConferenceParticipation> getConferencesByTipCarte(@PathVariable String tipConferinta){
         return conferenceParticipationService.findConferenceParticipationByTipConferinta(tipConferinta);
     }
+    @GetMapping("/getConferenceParticipationsByUser/{tipConferinta}/{userId}")
+    public List<ConferenceParticipation> getConferencesByTipCarteAndUserId(@PathVariable String tipConferinta,@PathVariable Integer userId){
+        return conferenceParticipationService.findConferenceParticipationsByTipConferintaAndIdUser(tipConferinta, userId);
+    }
 }

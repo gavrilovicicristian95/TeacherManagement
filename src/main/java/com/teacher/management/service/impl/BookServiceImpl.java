@@ -32,4 +32,9 @@ public class BookServiceImpl implements BookService {
     public List<Book> findByTipCarte(String tipCarte) {
         return bookRepository.findByTipCarte(tipCarte);
     }
+
+    @Override
+    public List<Book> findBookByTipCarteAndIdUser(String tipCarte, Integer idUSer) {
+        return bookRepository.findBookByTipCarteAndIdUser(tipCarte, idUSer);
+    }
 }

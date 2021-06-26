@@ -29,4 +29,8 @@ public class ResponsabilityTypesController {
     public List<ResponsabilityType> getAllResponsabilitiesTypes(){
         return responsabilityTypeService.findAll();
     }
+    @GetMapping("/getAllResponsabilitesTypesByTipResponsabilitate/{tipResponsabilitate}")
+    public List<ResponsabilityType> getAllResponsabilitiesTypesByTipResponsabilitate(@PathVariable String tipResponsabilitate){
+        return responsabilityTypeService.getResponsabilityTypesByTipResponsabilitate(tipResponsabilitate);
+    }
 }

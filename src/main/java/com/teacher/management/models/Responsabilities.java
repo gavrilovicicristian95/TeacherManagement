@@ -16,4 +16,6 @@ public class Responsabilities {
     private String responsabilityType;
     @Column(name = "nrAni")
     private String nrAni;
+    @Column(name = "punctaj")
+    private double punctaj;
 }

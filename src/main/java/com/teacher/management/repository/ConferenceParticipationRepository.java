@@ -13,5 +13,6 @@ public interface ConferenceParticipationRepository extends JpaRepository<Confere
     public ConferenceParticipation save(ConferenceParticipation conferenceParticipation);
     public List<ConferenceParticipation> findAll();
     public List<ConferenceParticipation> findConferenceParticipationByTipConferinta(String tipConferinta);
+    public List<ConferenceParticipation> findConferenceParticipationsByTipConferintaAndIdUser(String tipConferinta, Integer userId);
 
 }

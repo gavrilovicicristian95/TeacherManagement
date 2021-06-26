@@ -14,7 +14,7 @@ public class Citation {
     private long idCitation;
 
     @Column(name = "idUser")
-    private int idUser;
+    private Integer idUser;
 
     @Column(name = "tipCitatie")
     private String tipCitatie;

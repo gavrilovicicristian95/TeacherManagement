@@ -10,4 +10,5 @@ public interface CitationService {
     public Citation save(Citation citation);
     public List<Citation> findAll();
     public List<Citation> getCitationByTipCitatie(String tipCitatie);
+    public List<Citation> getCitationsByTipCitatieAndIdUser(String tipCitatie, Integer userId);
 }

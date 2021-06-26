@@ -14,7 +14,7 @@ public class Book {
     private long idBook;
 
     @Column(name = "idUser")
-    private int idUser;
+    private Integer idUser;
 
     @Column(name = "tipCarte")
     private String tipCarte;

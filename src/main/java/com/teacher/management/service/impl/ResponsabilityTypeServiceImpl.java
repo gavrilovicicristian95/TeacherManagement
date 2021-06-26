@@ -21,4 +21,9 @@ public class ResponsabilityTypeServiceImpl implements ResponsabilityTypeService 
     public List<ResponsabilityType> findAll() {
         return responsabilityTypeRepository.findAll();
     }
+
+    @Override
+    public List<ResponsabilityType> getResponsabilityTypesByTipResponsabilitate(String tipResponsabilitate) {
+        return responsabilityTypeRepository.getResponsabilityTypesByTipResponsabilitate(tipResponsabilitate);
+    }
 }

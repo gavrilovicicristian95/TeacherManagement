@@ -40,4 +40,8 @@ public class PatentController {
     public List<Patent> getPatentsByTipPatent(@PathVariable String tipBrevet){
         return patentService.findPatentByTipBrevet(tipBrevet);
     }
+    @GetMapping("/getPatentsByUser/{tipBrevet}/{idUser}")
+    public List<Patent> getPatentsByTipPatentAndUserId(@PathVariable String tipBrevet,@PathVariable Integer idUser){
+        return patentService.findPatentsByTipBrevetAndIdUser(tipBrevet, idUser);
+    }
 }

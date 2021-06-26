@@ -38,5 +38,9 @@ public class ContractController {
     public List<Contract> getContractsByTipContract(@PathVariable String tipContract){
         return contractService.findContractByTipContract(tipContract);
     }
+    @GetMapping("/getContractsByUser/{tipContract}/{userId}")
+    public List<Contract> getContractsByTipContractAndUserId(@PathVariable String tipContract,@PathVariable Integer userId){
+        return contractService.findContractsByTipContractAndIdUser(tipContract, userId);
+    }
 
 }

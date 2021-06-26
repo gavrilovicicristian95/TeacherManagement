@@ -33,4 +33,9 @@ public class ContractServiceImpl implements ContractService {
     public List<Contract> findContractByTipContract(String tipContract) {
         return contractRepository.findContractByTipContract(tipContract);
     }
+
+    @Override
+    public List<Contract> findContractsByTipContractAndIdUser(String tipContract, Integer userId) {
+        return contractRepository.findContractsByTipContractAndIdUser(tipContract, userId);
+    }
 }

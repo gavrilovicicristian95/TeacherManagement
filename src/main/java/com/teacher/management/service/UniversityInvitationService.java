@@ -10,4 +10,5 @@ public interface UniversityInvitationService {
     public UniversityInvitation save(UniversityInvitation universityInvitation);
     public List<UniversityInvitation> findAll();
     public List<UniversityInvitation> findUniversityInvitationByTipInvitatie(String invitatie);
+    public List<UniversityInvitation> findUniversityInvitationsByTipInvitatieAndIdUser(String tipInvitatie, Integer idUser);
 }

@@ -33,4 +33,9 @@ public class ConferenceParticipationServiceImpl implements ConferenceParticipati
     public List<ConferenceParticipation> findConferenceParticipationByTipConferinta(String tipConferinta) {
         return conferenceParticipationRepository.findConferenceParticipationByTipConferinta(tipConferinta);
     }
+
+    @Override
+    public List<ConferenceParticipation> findConferenceParticipationsByTipConferintaAndIdUser(String tipConferinta, Integer userId) {
+        return conferenceParticipationRepository.findConferenceParticipationsByTipConferintaAndIdUser(tipConferinta, userId);
+    }
 }

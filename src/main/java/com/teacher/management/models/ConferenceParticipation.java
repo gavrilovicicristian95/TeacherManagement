@@ -14,7 +14,7 @@ public class ConferenceParticipation {
     private long idConferenceParticipation;
 
     @Column(name = "idUser")
-    private int idUser;
+    private Integer idUser;
 
     @Column(name = "tipConferinta")
     private String tipConferinta;

@@ -33,4 +33,9 @@ public class PatentServiceImpl implements PatentService {
     public List<Patent> findPatentByTipBrevet(String brevet) {
         return patentRepository.findPatentByTipBrevet(brevet);
     }
+
+    @Override
+    public List<Patent> findPatentsByTipBrevetAndIdUser(String tipBrevet, Integer userId) {
+        return patentRepository.findPatentsByTipBrevetAndIdUser(tipBrevet, userId);
+    }
 }

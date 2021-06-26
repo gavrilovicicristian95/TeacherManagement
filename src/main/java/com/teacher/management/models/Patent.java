@@ -14,7 +14,7 @@ public class Patent {
     private long idPatent;
 
     @Column(name = "idUser")
-    private int idUser;
+    private Integer idUser;
 
     @Column(name = "tipBrevet")
     private String tipBrevet;

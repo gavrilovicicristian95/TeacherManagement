@@ -6,6 +6,7 @@ import com.teacher.management.util.CitationScores;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.parameters.P;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -40,5 +41,9 @@ public class CitationController {
     @GetMapping("/getCitations/{tipCitatie}")
     public List<Citation> getCitationsByTipCitatie(@PathVariable String tipCitatie){
         return citationService.getCitationByTipCitatie(tipCitatie);
+    }
+    @GetMapping("/getCitationsByUser/{tipCitatie}/{userId}")
+    public List<Citation> getCitationsByTipCitatieAndUserId(@PathVariable String tipCitatie, @PathVariable Integer userId){
+        return citationService.getCitationsByTipCitatieAndIdUser(tipCitatie, userId);
     }
 }

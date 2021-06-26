@@ -8,4 +8,5 @@ import java.util.List;
 public interface ResponsabilityTypeRepository extends JpaRepository<ResponsabilityType,Long> {
     public ResponsabilityType save(ResponsabilityType responsabilityType);
     public List<ResponsabilityType> findAll();
+    public List<ResponsabilityType> getResponsabilityTypesByTipResponsabilitate(String tipResponsabilitate);
 }

@@ -10,4 +10,5 @@ public interface PatentService {
     public Patent save(Patent patent);
     public List<Patent> findAll();
     public List<Patent> findPatentByTipBrevet(String brevet);
+    public List<Patent> findPatentsByTipBrevetAndIdUser(String tipBrevet,Integer userId);
 }

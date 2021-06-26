@@ -33,4 +33,9 @@ public class ScientificWorkServiceImpl implements ScientificWorkService {
     public List<ScientificWork> findScientificWorkByTipLucrare(String lucrare) {
         return scientificWorkRepository.findScientificWorkByTipLucrare(lucrare);
     }
+
+    @Override
+    public List<ScientificWork> findScientificWorksByTipLucrareAndIdUser(String tipLucrare, Integer idUser) {
+        return scientificWorkRepository.findScientificWorksByTipLucrareAndIdUser(tipLucrare,idUser);
+    }
 }
