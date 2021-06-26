@@ -22,6 +22,6 @@ public class ResponsabilitiesController {
     }
     @GetMapping("/getResponsabilitiesByUser/{responsabilityType}/{userId}")
     public List<Responsabilities> getResponsabilitiesByResponsabilityTypeAndIdUser(@PathVariable String responsabilityType, @PathVariable Integer userId){
-        return responsabilitiesService.getResponsabilitiesByResponsabilityTypeAndIdUser(responsabilityType, userId);
+        return responsabilitiesService.getResponsabilitiesByTipResponsabilitateAndIdUser(responsabilityType, userId);
     }
 }

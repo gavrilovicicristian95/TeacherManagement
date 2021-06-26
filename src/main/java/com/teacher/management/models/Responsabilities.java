@@ -14,6 +14,8 @@ public class Responsabilities {
     private Integer idUser;
     @Column(name = "responsabilityType")
     private String responsabilityType;
+    @Column(name = "tipResponsability")
+    private String tipResponsabilitate;
     @Column(name = "nrAni")
     private String nrAni;
     @Column(name = "punctaj")

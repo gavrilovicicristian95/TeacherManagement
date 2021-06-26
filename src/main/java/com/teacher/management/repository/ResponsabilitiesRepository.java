@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface ResponsabilitiesRepository extends JpaRepository<Responsabilities,Long> {
     public Responsabilities save(Responsabilities responsabilities);
-    public List<Responsabilities> getResponsabilitiesByResponsabilityTypeAndIdUser(String responsabilityType, Integer idUser);
+    public List<Responsabilities> getResponsabilitiesByTipResponsabilitateAndIdUser(String tipResponsabilitate, Integer idUser);
 }

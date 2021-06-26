@@ -19,7 +19,8 @@ public class ResponsabilitiesServiceImpl implements ResponsabilitiesService {
     }
 
     @Override
-    public List<Responsabilities> getResponsabilitiesByResponsabilityTypeAndIdUser(String responsabilityType, Integer idUser) {
-        return responsabilitiesRepository.getResponsabilitiesByResponsabilityTypeAndIdUser(responsabilityType, idUser);
+    public List<Responsabilities> getResponsabilitiesByTipResponsabilitateAndIdUser(String tipResponsabilitate, Integer idUser) {
+        return responsabilitiesRepository.getResponsabilitiesByTipResponsabilitateAndIdUser(tipResponsabilitate, idUser);
     }
+
 }
