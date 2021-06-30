@@ -8,12 +8,14 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/articles")
 @RequiredArgsConstructor
+@Transactional
 public class ArticlesController {
 
     private final ArticleService articleService;
@@ -28,7 +30,7 @@ public class ArticlesController {
     }
 
     @GetMapping("/getArticle/{idArticol}")
-    public Article findByIdArticol(@PathVariable int idArticol){
+    public Article findByIdArticol(@PathVariable Long idArticol){
         return articleService.findByIdArticol(idArticol);
     }
 
@@ -44,6 +46,10 @@ public class ArticlesController {
     @GetMapping("/getArticlesByUser/{tipArticol}/{idUser}")
     public List<Article> getArticlesByTipArticol(@PathVariable String tipArticol, @PathVariable Integer idUser){
         return articleService.getArticleByTipArticolAndIdUser(tipArticol,idUser);
+    }
+    @DeleteMapping("/deleteArticle/{idArticol}")
+    public void deleteArticle(@PathVariable Long idArticol){
+        articleService.deleteArticleByIdArticol(idArticol);
     }
 
 }

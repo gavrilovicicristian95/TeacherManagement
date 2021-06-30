@@ -20,7 +20,7 @@ public class UniversityInvitationController {
         universityInvitationService.save(universityInvitation);
         return new ResponseEntity<>(universityInvitation, HttpStatus.OK);
     }
-    @PostMapping("/getUniversityInvitationsByUser/{tipInvitatie}/{userId}")
+    @GetMapping("/getUniversityInvitationsByUser/{tipInvitatie}/{userId}")
     public List<UniversityInvitation> getUniversityInvitationsByTipInvitatieAndUserId(@PathVariable String tipInvitatie, @PathVariable Integer userId){
         return universityInvitationService.findUniversityInvitationsByTipInvitatieAndIdUser(tipInvitatie,userId);
     }

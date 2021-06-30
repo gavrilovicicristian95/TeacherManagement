@@ -14,7 +14,7 @@ public class ArticleServiceImpl implements ArticleService {
     private final ArticleRepository articleRepository;
 
     @Override
-    public Article findByIdArticol(int idArticol) {
+    public Article findByIdArticol(long idArticol) {
         return articleRepository.findByIdArticol(idArticol);
     }
 
@@ -36,5 +36,10 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public List<Article> getArticleByTipArticolAndIdUser(String tipArticol, Integer userId) {
         return articleRepository.getArticleByTipArticolAndIdUser(tipArticol, userId);
+    }
+
+    @Override
+    public void deleteArticleByIdArticol(long idArticol) {
+        articleRepository.deleteArticleByIdArticol(idArticol);
     }
 }

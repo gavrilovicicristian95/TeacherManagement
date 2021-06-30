@@ -21,4 +21,6 @@ public class InstitutionalActivity {
     private String linkPaginaWeb;
     @Column(name = "tipActivitateInstitutionala")
     private String tipActivitateInstitutionala;
+    @Column(name = "punctaj")
+    private double punctaj;
 }

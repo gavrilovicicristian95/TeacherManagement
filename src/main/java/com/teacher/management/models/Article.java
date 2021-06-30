@@ -11,7 +11,7 @@ public class Article {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int idArticol;
+    private long idArticol;
 
     @Column(name = "idUser")
     private Integer idUser;
