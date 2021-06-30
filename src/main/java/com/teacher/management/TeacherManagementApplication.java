@@ -26,7 +26,25 @@ public class TeacherManagementApplication {
 		if(responsabilityTypeService.findAll().size() == 0) {
 			return () -> {
 				responsabilityTypeService.save(new ResponsabilityType(100, "Rector","responsabilitatiUniversitate"));
-				responsabilityTypeService.save(new ResponsabilityType(80, "Prorectori","responsabilitatiSenat"));
+				responsabilityTypeService.save(new ResponsabilityType(80, "Director CSUD","responsabilitatiUniversitate"));
+				responsabilityTypeService.save(new ResponsabilityType(80, "Director FC/ID/IFR ","responsabilitatiUniversitate"));
+				responsabilityTypeService.save(new ResponsabilityType(60, "Decani","responsabilitatiUniversitate"));
+				responsabilityTypeService.save(new ResponsabilityType(40, "Prodecani","responsabilitatiUniversitate"));
+				responsabilityTypeService.save(new ResponsabilityType(40, "irector Departamente Interdisciplinare","responsabilitatiUniversitate"));
+				responsabilityTypeService.save(new ResponsabilityType(40, "Director Scoala Doctorala ","responsabilitatiUniversitate"));
+				responsabilityTypeService.save(new ResponsabilityType(40, "Director ID","responsabilitatiUniversitate"));
+				responsabilityTypeService.save(new ResponsabilityType(40, "Director Centrul de Studii Europene","responsabilitatiUniversitate"));
+				responsabilityTypeService.save(new ResponsabilityType(40, "Director Grădina Botanică ","responsabilitatiUniversitate"));
+				responsabilityTypeService.save(new ResponsabilityType(40, "Director Muzee","responsabilitatiUniversitate"));
+
+				responsabilityTypeService.save(new ResponsabilityType(80, "Senatul Universităţii - PRESEDINTE ","responsabilitatiSenat"));
+				responsabilityTypeService.save(new ResponsabilityType(50, "Senatul Universităţii - VICEPRESEDINTE ","responsabilitatiSenat"));
+				responsabilityTypeService.save(new ResponsabilityType(30, "Presedinte al unei comisii de specialitate ","responsabilitatiSenat"));
+				responsabilityTypeService.save(new ResponsabilityType(15, "Senatul Universităţii- MEMBRU  ","responsabilitatiSenat"));
+				responsabilityTypeService.save(new ResponsabilityType(10, "Consiliul Facultăţii ","responsabilitatiSenat"));
+				responsabilityTypeService.save(new ResponsabilityType(5, "Consiliul Departamentului ","responsabilitatiSenat"));
+
+
 			};
 		}
 		if(articlesFormulasService.findAll().size() == 0) {
