@@ -23,19 +23,19 @@ public class InstitutionalActivitiesScores {
 
             return 50;
         }
-        if (tipCoord.equalsIgnoreCase("coordonatorOrganizareManifestariInternationale")) {
+        if (tipCoord.equalsIgnoreCase("organizariManiferstariInternationaleCoord")) {
 
             return 20;
         }
-        if (tipCoord.equalsIgnoreCase("membruOrganizareManifestariInternationale")) {
+        if (tipCoord.equalsIgnoreCase("organizariManiferstariInternationaleMembru")) {
 
             return 10;
         }
-        if (tipCoord.equalsIgnoreCase("coordonatorOrganizareManifestariNationale")) {
+        if (tipCoord.equalsIgnoreCase("organizariManiferstariNationaleCoord")) {
 
             return 15;
         }
-        if (tipCoord.equalsIgnoreCase("membruOrganizareManifestariNational")) {
+        if (tipCoord.equalsIgnoreCase("organizariManiferstariNationaleMembru")) {
 
             return 5;
         }
