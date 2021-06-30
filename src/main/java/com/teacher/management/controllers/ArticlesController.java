@@ -1,6 +1,7 @@
 package com.teacher.management.controllers;
 
 import com.teacher.management.models.Article;
+import com.teacher.management.repository.UserRepository;
 import com.teacher.management.service.ArticleService;
 import com.teacher.management.util.ArticleScores;
 import lombok.RequiredArgsConstructor;
@@ -20,11 +21,12 @@ public class ArticlesController {
 
     private final ArticleService articleService;
     private final ArticleScores articleScores;
-
+    private final UserRepository userRepository;
     @PostMapping("/addArticle")
     public ResponseEntity<Article> saveArticle(@RequestBody Article article){
         article.setPunctaj(articleScores.getArticleScore(article.getFactoriImpact(), article.getNrAutori(), article.getTipArticol(), article.getSjr()));
         articleService.save(article);
+
 
         return new ResponseEntity<>(article, HttpStatus.OK);
     }

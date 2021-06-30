@@ -18,6 +18,14 @@ public class MobilitiesProjectsController {
     private final MobilitiesProjectsService mobilitiesProjectsService;
     @PostMapping("/addMobilityProject")
     public ResponseEntity<MobilitiesProject> saveMobilityProject(@RequestBody MobilitiesProject mobilitiesProject){
+        String tipProiect=mobilitiesProject.getTipProiect();
+        if(tipProiect.equalsIgnoreCase("coordonatorProiecteMobilitati")){
+            mobilitiesProject.setPunctaj(mobilitiesProject.getValoareProiectEuro() / 1000);
+        }else if(tipProiect.equalsIgnoreCase("membruProiecteMobilitati")){
+            if(mobilitiesProject.getNrMembriEchipa() != 0) {
+                mobilitiesProject.setPunctaj(mobilitiesProject.getValoareProiectEuro()/2000/mobilitiesProject.getNrMembriEchipa());
+            }
+        }
         mobilitiesProjectsService.save(mobilitiesProject);
         return new ResponseEntity<>(mobilitiesProject, HttpStatus.OK);
     }

@@ -15,4 +15,5 @@ public interface ArticleRepository extends JpaRepository<Article, Long> {
     public List<Article> getArticlesByTipArticol(String tipArticol);
     public List<Article> getArticleByTipArticolAndIdUser(String tipArticol, Integer userId);
     public void deleteArticleByIdArticol(long IdArticol);
+
 }

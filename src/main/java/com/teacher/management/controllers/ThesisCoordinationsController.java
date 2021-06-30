@@ -2,6 +2,7 @@ package com.teacher.management.controllers;
 
 import com.teacher.management.models.ThesisCoordination;
 import com.teacher.management.service.ThesisCoordinationService;
+import com.teacher.management.util.ThesisCoordinationScores;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,9 +16,10 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ThesisCoordinationsController {
     private final ThesisCoordinationService thesisCoordinationService;
+    private final ThesisCoordinationScores thesisCoordinationScores;
     @PostMapping("/addThesisCoordination")
     public ResponseEntity<ThesisCoordination> saveThesisCoordination(@RequestBody ThesisCoordination thesisCoordination){
-
+        thesisCoordination.setPunctaj(thesisCoordinationScores.getArticleScore(thesisCoordination.getTipTeza()));
         thesisCoordinationService.save(thesisCoordination);
         return new ResponseEntity<>(thesisCoordination, HttpStatus.OK);
     }

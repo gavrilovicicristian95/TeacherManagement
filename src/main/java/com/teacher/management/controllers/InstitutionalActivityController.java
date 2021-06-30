@@ -3,6 +3,7 @@ package com.teacher.management.controllers;
 import com.teacher.management.models.InstitutionalActivity;
 import com.teacher.management.models.ScientificWork;
 import com.teacher.management.service.InstitutionalActivityService;
+import com.teacher.management.util.InstitutionalActivitiesScores;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,8 +17,10 @@ import java.util.List;
 @RequiredArgsConstructor
 public class InstitutionalActivityController {
     private final InstitutionalActivityService institutionalActivityService;
+    private final InstitutionalActivitiesScores institutionalActivitiesScores;
     @PostMapping("/addInstitutionalActivity")
     public ResponseEntity<InstitutionalActivity> saveScientificWork(@RequestBody InstitutionalActivity institutionalActivity){
+        institutionalActivity.setPunctaj(institutionalActivitiesScores.getArticleScore(institutionalActivity.getTipActivitateInstitutionala()));
         institutionalActivityService.save(institutionalActivity);
         return new ResponseEntity<>(institutionalActivity, HttpStatus.OK);
     }

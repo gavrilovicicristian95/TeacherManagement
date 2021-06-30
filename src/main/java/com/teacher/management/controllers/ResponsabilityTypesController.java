@@ -16,6 +16,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/responsabilitiesTypes")
 @RequiredArgsConstructor
+
 public class ResponsabilityTypesController {
     private final ResponsabilityTypeService responsabilityTypeService;
 

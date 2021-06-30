@@ -2,6 +2,7 @@ package com.teacher.management.controllers;
 
 import com.teacher.management.models.CoursesManuals;
 import com.teacher.management.service.CoursesManualsService;
+import com.teacher.management.util.CoursesManualsScores;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,9 +16,10 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CoursesManualsController {
     private final CoursesManualsService coursesManualsService;
+    private final CoursesManualsScores coursesManualsScores;
     @PostMapping("/addCoursesManuals")
     public ResponseEntity<CoursesManuals> saveCoursesManuals(@RequestBody CoursesManuals coursesManuals){
-
+        coursesManuals.setPunctaj(coursesManualsScores.getArticleScore(coursesManuals.getTipCursManual(),coursesManuals.getNrPagini()));
         coursesManualsService.save(coursesManuals);
         return new ResponseEntity<>(coursesManuals, HttpStatus.OK);
     }

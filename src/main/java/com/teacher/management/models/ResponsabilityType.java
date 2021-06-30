@@ -18,9 +18,10 @@ public class ResponsabilityType {
     @Column(name = "responsabilityType")
     private String responsabilityType;
 
-    public ResponsabilityType(int nrPuncte, String type) {
+    public ResponsabilityType(int nrPuncte, String type, String tipResponsabilitate) {
         this.nrPuncteAnual=nrPuncte;
         this.responsabilityType=type;
+        this.tipResponsabilitate=tipResponsabilitate;
     }
 
     public ResponsabilityType() {

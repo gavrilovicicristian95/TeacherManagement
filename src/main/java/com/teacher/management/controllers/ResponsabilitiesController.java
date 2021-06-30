@@ -2,6 +2,7 @@ package com.teacher.management.controllers;
 
 import com.teacher.management.models.Responsabilities;
 import com.teacher.management.service.ResponsabilitiesService;
+import com.teacher.management.service.ResponsabilityTypeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,8 +16,10 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ResponsabilitiesController {
     private final ResponsabilitiesService responsabilitiesService;
+    private final ResponsabilityTypeService  responsabilityTypeService;
     @PostMapping("/addResponsability")
     public ResponseEntity<Responsabilities> saveResponsability(@RequestBody Responsabilities responsabilities){
+        responsabilities.setPunctaj(responsabilities.getNrAni() * responsabilityTypeService.getResponsabilityTypeByResponsabilityType(responsabilities.getResponsabilityType()).getNrPuncteAnual());
         responsabilitiesService.save(responsabilities);
         return new ResponseEntity<>(responsabilities, HttpStatus.OK);
     }

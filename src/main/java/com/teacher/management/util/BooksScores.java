@@ -14,10 +14,7 @@ public class BooksScores {
             puncteNrPagini = nrPagini * 0.4;
             return  puncteNrPagini / maximum;
         }
-        if(tipCarte.equalsIgnoreCase("taraAcreditatCNCS")) {
-            puncteNrPagini = nrPagini * 0.4;
-            return  puncteNrPagini / maximum;
-        }
+
         if(tipCarte.equalsIgnoreCase("alteEdituri")) {
             puncteNrPagini = nrPagini * 0.2;
             return  puncteNrPagini / maximum;

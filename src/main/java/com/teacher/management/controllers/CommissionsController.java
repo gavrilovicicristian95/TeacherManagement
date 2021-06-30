@@ -18,6 +18,19 @@ public class CommissionsController {
     private final CommissionsService commissionsService;
     @PostMapping("/addCommission")
     public ResponseEntity<Commissions> saveCommission(@RequestBody Commissions commissions){
+        String tipComisie=commissions.getTipComisie();
+        if(tipComisie.equalsIgnoreCase("membruComisiiUniversitateAvizateSenat")){
+            commissions.setPunctaj(10);
+        }
+        if(tipComisie.equalsIgnoreCase("membruComisiiConcursPostDidactic")){
+            commissions.setPunctaj(5);
+        }
+        if(tipComisie.equalsIgnoreCase("membruComisiiDoctoratStrainatate")){
+            commissions.setPunctaj(10);
+        }
+        if(tipComisie.equalsIgnoreCase("membruComisiiDoctoratTara")){
+            commissions.setPunctaj(5);
+        }
         commissionsService.save(commissions);
         return new ResponseEntity<>(commissions, HttpStatus.OK);
     }

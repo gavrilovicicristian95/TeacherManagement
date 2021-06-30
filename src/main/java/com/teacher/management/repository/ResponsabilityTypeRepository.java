@@ -9,4 +9,5 @@ public interface ResponsabilityTypeRepository extends JpaRepository<Responsabili
     public ResponsabilityType save(ResponsabilityType responsabilityType);
     public List<ResponsabilityType> findAll();
     public List<ResponsabilityType> getResponsabilityTypesByTipResponsabilitate(String tipResponsabilitate);
+    public ResponsabilityType getResponsabilityTypeByResponsabilityType(String responsabilityType);
 }
