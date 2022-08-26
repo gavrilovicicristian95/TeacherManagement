@@ -18,10 +18,10 @@ import java.util.List;
 @RequiredArgsConstructor
 @Transactional
 public class ArticlesController {
-
     private final ArticleService articleService;
     private final ArticleScores articleScores;
     private final UserRepository userRepository;
+
     @PostMapping("/addArticle")
     public ResponseEntity<Article> saveArticle(@RequestBody Article article){
         article.setPunctaj(articleScores.getArticleScore(article.getFactoriImpact(), article.getNrAutori(), article.getTipArticol(), article.getSjr()));

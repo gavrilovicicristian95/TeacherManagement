@@ -2,7 +2,6 @@ package com.teacher.management;
 
 import com.teacher.management.models.ArticlesFormulas;
 import com.teacher.management.models.ResponsabilityType;
-import com.teacher.management.repository.ResponsabilityTypeRepository;
 import com.teacher.management.service.ArticlesFormulasService;
 import com.teacher.management.service.ResponsabilityTypeService;
 import org.springframework.beans.factory.InitializingBean;

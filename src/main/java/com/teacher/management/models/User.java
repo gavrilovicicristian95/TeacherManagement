@@ -38,14 +38,6 @@ public class User {
 				inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private Set<Role> roles = new HashSet<>();
 
-	public double totalResearch;
-
-	public double totalDidactica;
-
-	public double totalInstitutional;
-
-	public double totalActivity;
-
 	public User() {
 	}
 
@@ -53,17 +45,6 @@ public class User {
 		this.username = username;
 		this.email = email;
 		this.password = password;
-	}
-
-	public User(String username, String email, String password, double totalResearch,
-				double totalDidactica, double totalInstitutional, double totalActivity) {
-		this.username = username;
-		this.email = email;
-		this.password = password;
-		this.totalResearch = totalResearch;
-		this.totalDidactica = totalDidactica;
-		this.totalInstitutional = totalInstitutional;
-		this.totalActivity = totalActivity;
 	}
 
 	public Long getId() {
@@ -106,35 +87,4 @@ public class User {
 		this.roles = roles;
 	}
 
-	public Double getTotalResearch() {
-		return totalResearch;
-	}
-
-	public void setTotalResearch(Double totalResearch) {
-		this.totalResearch = totalResearch;
-	}
-
-	public Double getTotalDidactica() {
-		return totalDidactica;
-	}
-
-	public void setTotalDidactica(Double totalDidactica) {
-		this.totalDidactica = totalDidactica;
-	}
-
-	public Double getTotalInstitutional() {
-		return totalInstitutional;
-	}
-
-	public void setTotalInstitutional(Double totalInstitutional) {
-		this.totalInstitutional = totalInstitutional;
-	}
-
-	public Double getTotalActivity() {
-		return totalActivity;
-	}
-
-	public void setTotalActivity(Double totalActivity) {
-		this.totalActivity = totalActivity;
-	}
 }
