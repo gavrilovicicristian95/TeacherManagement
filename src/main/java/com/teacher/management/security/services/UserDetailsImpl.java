@@ -24,15 +24,28 @@ public class UserDetailsImpl implements UserDetails {
 	@JsonIgnore
 	private String password;
 
+	public double totalResearch;
+
+	public double totalDidactica;
+
+	public double totalInstitutional;
+
+	public double totalActivity;
+
 	private Collection<? extends GrantedAuthority> authorities;
 
 	public UserDetailsImpl(Long id, String username, String email, String password,
-			Collection<? extends GrantedAuthority> authorities) {
+			Collection<? extends GrantedAuthority> authorities,
+						   double totalResearch, double totalDidactica, double totalInstitutional, double totalActivity) {
 		this.id = id;
 		this.username = username;
 		this.email = email;
 		this.password = password;
 		this.authorities = authorities;
+		this.totalResearch = totalResearch;
+		this.totalDidactica = totalDidactica;
+		this.totalInstitutional = totalInstitutional;
+		this.totalActivity = totalActivity;
 	}
 
 	public static UserDetailsImpl build(User user) {
@@ -45,7 +58,11 @@ public class UserDetailsImpl implements UserDetails {
 				user.getUsername(), 
 				user.getEmail(),
 				user.getPassword(), 
-				authorities);
+				authorities,
+				user.getTotalResearch(),
+				user.getTotalDidactica(),
+				user.getTotalInstitutional(),
+				user.getTotalActivity());
 	}
 
 	@Override
@@ -69,6 +86,38 @@ public class UserDetailsImpl implements UserDetails {
 	@Override
 	public String getUsername() {
 		return username;
+	}
+
+	public Double getTotalResearch() {
+		return totalResearch;
+	}
+
+	public void setTotalResearch(Double totalResearch) {
+		this.totalResearch = totalResearch;
+	}
+
+	public Double getTotalDidactica() {
+		return totalDidactica;
+	}
+
+	public void setTotalDidactica(Double totalDidactica) {
+		this.totalDidactica = totalDidactica;
+	}
+
+	public Double getTotalInstitutional() {
+		return totalInstitutional;
+	}
+
+	public void setTotalInstitutional(Double totalInstitutional) {
+		this.totalInstitutional = totalInstitutional;
+	}
+
+	public Double getTotalActivity() {
+		return totalActivity;
+	}
+
+	public void setTotalActivity(Double totalActivity) {
+		this.totalActivity = totalActivity;
 	}
 
 	@Override

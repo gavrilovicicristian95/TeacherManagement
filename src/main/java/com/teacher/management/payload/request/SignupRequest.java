@@ -15,6 +15,14 @@ public class SignupRequest {
     private String email;
     
     private Set<String> role;
+
+    public double totalResearch;
+
+    public double totalDidactica;
+
+    public double totalInstitutional;
+
+    public double totalActivity;
     
     @NotBlank
     @Size(min = 6, max = 40)
@@ -52,4 +60,35 @@ public class SignupRequest {
       this.role = role;
     }
 
+    public Double getTotalResearch() {
+        return totalResearch;
+    }
+
+    public void setTotalResearch(Double totalResearch) {
+        this.totalResearch = totalResearch;
+    }
+
+    public Double getTotalDidactica() {
+        return totalDidactica;
+    }
+
+    public void setTotalDidactica(Double totalDidactica) {
+        this.totalDidactica = totalDidactica;
+    }
+
+    public Double getTotalInstitutional() {
+        return totalInstitutional;
+    }
+
+    public void setTotalInstitutional(Double totalInstitutional) {
+        this.totalInstitutional = totalInstitutional;
+    }
+
+    public Double getTotalActivity() {
+        return totalActivity;
+    }
+
+    public void setTotalActivity(Double totalActivity) {
+        this.totalActivity = totalActivity;
+    }
 }
